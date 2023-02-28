@@ -29,7 +29,7 @@ public:
 	vector<CNode*> m_Node; //网络节点集合
 	vector<CNode*> m_Depot; //网络节点集合
 	vector<CLink*> m_Link; //网络路段集合
-	vector<CLink*> m_DepotNode;
+	vector<CLink*> m_DepotNode; 
 	vector<COrigin*> m_Origin; //网络的起点集合
 	vector<CRoute*> m_Route; //网络的route集合
 	int m_nSolution;
@@ -56,20 +56,20 @@ public:
 	int* ShortestPathParent;//最短路上，所有节点到起点的在最短路上的前继路段  free
 	int temp_do;
 	int n_swap;
-#define NP 10 // The number of food sources equals the half of the colony size
-#define FoodNumber NP/2 // The number of food sources equals the half of the colony size
-#define maxCycle 500 //The number of cycles for foraging {a stopping criteria}*/
-#define crossover_rate 0.3 //Crossover rate 0.1
-#define mutation_rate 0.2 //Mutation rate 0.2
-#define time_interval 0.25 //parking node service time
-#define average_charging_time 2.0 //charging plie average charging time
-#define ValueOfWalkingTime 2.0
-#define WalkingSpeed 4.0
-#define ValueOfRidingTime 1
-#define ValueOfWaitingTime 1
-#define CapUpper 15
-#define CapLower 5
-#define ArtificialRoute 10000 //虚拟路的cost
+	#define NP 10 // The number of food sources equals the half of the colony size
+	#define FoodNumber NP/2 // The number of food sources equals the half of the colony size
+	#define maxCycle 500 //The number of cycles for foraging {a stopping criteria}*/
+	#define crossover_rate 0.3 //Crossover rate 0.1
+	#define mutation_rate 0.2 //Mutation rate 0.2
+	#define time_interval 0.25 //parking node service time
+	#define average_charging_time 2.0 //charging plie average charging time
+	#define ValueOfWalkingTime 2.0
+	#define WalkingSpeed 4.0
+	#define ValueOfRidingTime 1
+	#define ValueOfWaitingTime 1
+	#define CapUpper 15
+	#define CapLower 5
+	#define ArtificialRoute 10000 //虚拟路的cost
 	const double arfa3 = 21;//Battery consumption coefficient
 	const double E_max = 672;//Maximum battery capacity
 	const double days = 10; //一天运行10小时
@@ -133,7 +133,7 @@ public:
 	void Crossover();
 	void Mutation();
 	void Selection();
-	void GAProgram();
+	void GAProgram(); 
 
 
 private:

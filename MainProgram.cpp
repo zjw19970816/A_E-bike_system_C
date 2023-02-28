@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	clock_t start, end;
 	start = clock();
 	srand(0);
-
+	
 	//Enumeration method for 4 nodesµÄnetwork
 	CNetwork* Network = new CNetwork(stod(argv[1]), stod(argv[2]), stod(argv[3]), stod(argv[4]), stod(argv[5]), stod(argv[6]), stod(argv[7]), stod(argv[8]), stod(argv[9]), stod(argv[10]), stod(argv[11]), stod(argv[12]), stod(argv[13]), stod(argv[14]));
 	//CNetwork* Network = new CNetwork();
